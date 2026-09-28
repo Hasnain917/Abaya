@@ -565,29 +565,84 @@ ul {
   max-width: 440px;
 }
 
+#catalog,
+#manifesto,
+#craft,
+#lookbook,
+#bespoke {
+  scroll-margin-top: calc(var(--header-height) + 16px);
+}
+
 .hero-cover-actions {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
   flex-wrap: wrap;
 }
 
-/* Hero Slider Controls */
+.hero-primary-btn {
+  background-color: var(--color-noir);
+  color: var(--color-white);
+  border: 1px solid var(--color-noir);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  padding: 14px 28px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.hero-primary-btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-noir);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hero-secondary-btn {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: var(--color-noir);
+  border: 1px solid var(--color-noir);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  padding: 14px 24px;
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.hero-secondary-btn:hover {
+  background-color: var(--color-noir);
+  color: var(--color-white);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Hero Slider Controls (Clean Bottom Right Placement) */
 .hero-slider-controls {
   position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  bottom: 28px;
+  right: 40px;
+  left: auto;
+  transform: none;
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 14px;
-  background: rgba(255, 255, 255, 0.9);
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  padding: 6px 16px;
+  padding: 6px 14px;
   border: 1px solid var(--color-hairline);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
 }
 
 .hero-slider-arrow {
@@ -2568,13 +2623,13 @@ ul {
     height: 100%;
     background: linear-gradient(
       to top,
-      rgba(255, 255, 255, 0.94) 0%,
-      rgba(255, 255, 255, 0.45) 30%,
+      rgba(255, 255, 255, 0.96) 0%,
+      rgba(255, 255, 255, 0.5) 35%,
       rgba(255, 255, 255, 0) 65%
     );
     display: flex;
     align-items: flex-end;
-    padding: 20px 16px 36px 16px;
+    padding: 20px 16px 54px 16px;
   }
   .hero-cover-content {
     max-width: 100%;
@@ -2590,6 +2645,27 @@ ul {
   }
   .hero-slider-controls {
     bottom: 12px;
+    right: 16px;
+    left: auto;
+    transform: none;
+    padding: 4px 10px;
+  }
+  .hero-cover-actions {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+  }
+  .hero-primary-btn,
+  .hero-secondary-btn {
+    flex: 1;
+    padding: 12px 10px;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    min-height: 44px;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 2px;
   }
 
   /* Category Filter Horizontal Swipe */
