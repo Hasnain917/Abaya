@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Z-ABAYA | Haute Couture & Modern Modesty Atelier</title>
+  <meta name="description" content="Discover Z-ABAYA — Minimal luxury, architectural drapes, and handcrafted haute couture abayas made from Japanese triacetate and Italian Mulberry silk." />
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="Z..png" />
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       2. EDITORIAL MINIMAL STICKY HEADER
+       ========================================== -->
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        
+        <!-- Left: Brand Logo using Z..png -->
+        <a href="#" class="brand-logo" title="Z. Atelier Home">
+          <img src="Z..png" alt="Z." class="brand-logo-img" />
+        </a>
+
+        <!-- Right: Navigation Menu & Utility Actions -->
+        <div class="header-right-group">
+          <!-- Navigation Links -->
+          <nav class="nav-links">
+            <a href="#catalog" class="nav-link">Creations</a>
+            <a href="#manifesto" class="nav-link">Philosophy</a>
+            <a href="#lookbook" class="nav-link">Lookbook</a>
+            <a href="#craft" class="nav-link">Atelier Craft</a>
+            <a href="#bespoke" class="nav-link">Bespoke Atelier</a>
+          </nav>
+
+          <div class="header-divider"></div>
+
+          <!-- Header Utilities -->
+          <div class="header-utils">
+            <!-- Size Guide Trigger -->
+            <button class="util-btn size-guide-btn-header" id="sizeGuideTriggerBtn" title="Size & Height Calculator">
+              Size Guide
+            </button>
+
+            <!-- Search Trigger -->
+            <button class="util-btn" id="searchToggleBtn" title="Search Creations" aria-label="Search">
+              <svg class="util-icon" viewBox="0 0 24 24">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </button>
+
+            <!-- Wishlist Trigger -->
+            <button class="util-btn" onclick="openModal('quickViewModal')" title="Saved Silhouettes" aria-label="Wishlist">
+              <svg class="util-icon" viewBox="0 0 24 24">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+              </svg>
+              <span class="badge-count" id="wishlistBadgeCount">0</span>
+            </button>
+
+            <!-- Shopping Bag Trigger -->
+            <button class="util-btn" id="cartToggleBtn" title="Shopping Bag" aria-label="Shopping Bag">
+              <svg class="util-icon" viewBox="0 0 24 24">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-6z"></path>
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <path d="M16 10a4 4 0 0 1-8 0"></path>
+              </svg>
+              <span class="badge-count" id="cartBadgeCount">0</span>
+            </button>
+
+            <!-- Mobile Hamburger -->
+            <div class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Navigation">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         3. FULL-COVER HERO SLIDER (Slide 1: Z.-slide 1.jpg | Slide 2: Z. slide3.jpg)
+         ========================================== -->
+    <section class="hero-cover-section" id="heroSliderSection">
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide active" data-slide="0">
+        <img src="Z.-slide 1.jpg" alt="The Architecture of Modesty — Z-ABAYA" class="hero-slide-img" />
+        <div class="hero-slide-overlay">
+          <div class="container hero-cover-container">
+            <div class="hero-cover-content">
+              <span class="eyebrow" style="margin-bottom: 12px; letter-spacing: 0.28em;">Spring / Summer 2026 Collection</span>
+              <h1 class="hero-cover-title">
+                The Architecture of <em>Modesty</em>
+              </h1>
+              <p class="hero-cover-subtitle">
+                Sculptural drapes and pure architectural lines. Understated luxury tailored for the modern silhouette.
+              </p>
+              <div class="hero-cover-actions">
+                <a href="#catalog" class="btn btn-noir">Explore Creations</a>
+                <button class="btn-link book-appointment-trigger" style="font-size:0.75rem;">Book Private Fitting &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Z.-slide 2.jpg -->
+      <div class="hero-slide" data-slide="1">
+        <img src="Z.-slide 2.jpg" alt="Haute Couture Silhouette — Z-ABAYA" class="hero-slide-img" />
+        <div class="hero-slide-overlay">
+          <div class="container hero-cover-container">
+            <div class="hero-cover-content">
+              <span class="eyebrow" style="margin-bottom: 12px; letter-spacing: 0.28em;">Spring / Summer 2026 Collection</span>
+              <h1 class="hero-cover-title">
+                Sculptural Form & <em>Grace</em>
+              </h1>
+              <p class="hero-cover-subtitle">
+                Masterfully tailored silhouettes sculpted with architectural poise and refined understated luxury.
+              </p>
+              <div class="hero-cover-actions">
+                <a href="#catalog" class="btn btn-noir">Explore Palette</a>
+                <button class="btn-link book-appointment-trigger" style="font-size:0.75rem;">Book Private Fitting &rarr;</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Slider Navigation Controls -->
+      <div class="hero-slider-controls">
+        <button class="hero-slider-arrow" id="heroPrevSlide" aria-label="Previous Slide" title="Previous Slide">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.8" fill="none">
+            <polyline points="15 18 9 12 15 6"></polyline>
+          </svg>
+        </button>
+        <div class="hero-slider-dots" id="heroSliderDots">
+          <button class="hero-dot active" data-slide-index="0" aria-label="Slide 1"></button>
+          <button class="hero-dot" data-slide-index="1" aria-label="Slide 2"></button>
+        </div>
+        <button class="hero-slider-arrow" id="heroNextSlide" aria-label="Next Slide" title="Next Slide">
+          <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="1.8" fill="none">
+            <polyline points="9 18 15 12 9 6"></polyline>
+          </svg>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- ==========================================
+         4. EDITORIAL BRAND MANIFESTO & CRAFT
+         ========================================= -->
+    <section id="manifesto" class="manifesto-section">
+      <div class="container">
+        <div class="manifesto-grid">
+          
+          <div>
+            <span class="eyebrow">Atelier Philosophy</span>
+            <h2 class="manifesto-statement">
+              "We strip away the extraneous to reveal the profound power of <span>pure silhouette</span> and impeccable movement."
+            </h2>
+          </div>
+
+          <div class="manifesto-details">
+            <p>
+              Founded at the intersection of avant-garde architecture and timeless Middle Eastern heritage, <strong>Z-ABAYA</strong> redefines modest haute couture. Each garment is meticulously drafted in our Dubai and London salons with precise draping techniques and bespoke craftsmanship.
+            </p>
+            <div class="stat-row">
+              <div class="stat-item">
+                <h4>48h</h4>
+                <p>Artisanal Handcrafting</p>
+              </div>
+              <div class="stat-item">
+                <h4>100%</h4>
+                <p>Bespoke Tailoring</p>
+              </div>
+              <div class="stat-item">
+                <h4>1 of 50</h4>
+                <p>Numbered Limited Editions</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. EDITORIAL CURATED DIRECTIONS
+         ========================================== -->
+    <section class="editorial-pillars-section">
+      <div class="container">
+        
+        <div class="pillars-header">
+          <span class="eyebrow">Anthology Directions</span>
+          <h2 class="section-title">Two Expressions of Modern Modesty</h2>
+        </div>
+
+        <div class="pillars-grid">
+          
+          <!-- Pillar 1: Architectural Noir -->
+          <div class="pillar-card">
+            <div class="pillar-img-frame">
+              <img src="Embroided-back-front-white.jpg" alt="The Noir Atelier Collection" class="pillar-img" loading="lazy" />
+              <div class="pillar-tag">Direction 01</div>
+            </div>
+            <div class="pillar-content">
+              <span class="pillar-meta">Tailored Structure &bull; Pure Architectural Cut</span>
+              <h3 class="pillar-title">The Noir Atelier</h3>
+              <p class="pillar-desc">
+                Sculptural silhouettes defined by monolithic architectural lapels and crisp drape memory. Engineered for understated everyday authority.
+              </p>
+              <a href="#catalog" class="btn-link" style="font-size:0.75rem;">Explore Noir Series &rarr;</a>
+            </div>
+          </div>
+
+          <!-- Pillar 2: Translucent Organza & Silk -->
+          <div class="pillar-card">
+            <div class="pillar-img-frame">
+              <img src="Gemini_Generated_Image_9jx0u59jx0u59jx0.jpg" alt="Nocturne Haute Couture Ensemble" class="pillar-img" loading="lazy" />
+              <div class="pillar-tag">Direction 02</div>
+            </div>
+            <div class="pillar-content">
+              <span class="pillar-meta">Ethereal Motion &bull; Layered Translucent Drape</span>
+              <h3 class="pillar-title">Layered Outerwear</h3>
+              <p class="pillar-desc">
+                Multi-tiered sheer outer-layers designed to capture natural light and float gracefully across formal evening gatherings.
+              </p>
+              <a href="#catalog" class="btn-link" style="font-size:0.75rem;">Explore Layered Series &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. INTERACTIVE E-COMMERCE CATALOG
+         ========================================== -->
+    <section id="catalog" class="catalog-section">
+      <div class="container">
+        
+        <div class="catalog-header">
+          <div>
+            <span class="eyebrow">The 2026 Collection</span>
+            <h2 class="section-title">Curated Silhouettes</h2>
+            <p class="section-desc">
+              Every silhouette is hand-cut and finished with invisible hem stitchwork. Select any creation to view sizing specifications and bespoke tailoring options.
+            </p>
+          </div>
+          <button class="btn btn-outline book-appointment-trigger">Request Custom Measurement</button>
+        </div>
+
+        <!-- Filter Category Tabs -->
+        <div class="category-tabs">
+          <button class="cat-tab-btn active" data-category="all">All Creations (12)</button>
+          <button class="cat-tab-btn" data-category="noir-atelier">Noir Atelier</button>
+          <button class="cat-tab-btn" data-category="silk-chiffon">Silk & Chiffon</button>
+          <button class="cat-tab-btn" data-category="sculptural">Sculptural Drapes</button>
+          <button class="cat-tab-btn" data-category="occasion">Occasion & Gala</button>
+        </div>
+
+        <!-- Dynamic Product Grid (Injected via app.js) -->
+        <div class="products-grid" id="productsGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         7. CINEMATIC VIDEO ATELIER SHOWCASE
+         ========================================== -->
+    <section class="cinematic-showcase">
+      <div class="container">
+        <div class="video-feature-box">
+          <video id="featureVideo" class="feature-video-element" loop muted playsinline autoplay>
+            <source src="Animate_this_image.mp4" type="video/mp4" />
+          </video>
+          
+          <div class="video-feature-overlay">
+            <div class="video-overlay-top">
+              <span class="badge badge-noir">Cinematic Film &bull; Motion & Drape</span>
+              <button id="featureVideoPlayBtn" class="btn btn-white" style="padding:8px 20px; font-size:0.68rem;">Pause Film</button>
+            </div>
+            <div class="video-overlay-bottom">
+              <h3>The Art of Inaudible Luxury</h3>
+              <p>Witness the fluid cadence of our signature silhouettes as they capture natural light and transform movement into poetry.</p>
+              <button class="btn btn-white book-appointment-trigger">Experience the Collection</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         8. ATELIER CRAFT & TAILORING STANDARDS
+         ========================================== -->
+    <section id="craft" class="craft-section">
+      <div class="container">
+        <div style="text-align: center; max-width: 640px; margin: 0 auto;">
+          <span class="eyebrow">Artisanal Mastery</span>
+          <h2 class="section-title">The Anatomy of Our Craft</h2>
+          <p class="section-desc" style="margin: 8px auto 0 auto;">
+            Every silhouette is engineered with disciplined precision, sculptural drape memory, and invisible tailoring techniques.
+          </p>
+        </div>
+
+        <div class="craft-grid">
+          
+          <div class="craft-card">
+            <span class="craft-card-number">01</span>
+            <h3 class="craft-card-title">Architectural Tailoring</h3>
+            <p class="craft-card-desc">
+              Engineered draped patterns that create effortless fluid volume, natural wrinkle resistance, intense light-absorbing blackness, and a cool-touch graceful presence.
+            </p>
+            <div class="craft-card-spec">Structured Silhouette &bull; Zero Crease Memory</div>
+          </div>
+
+          <div class="craft-card">
+            <span class="craft-card-number">02</span>
+            <h3 class="craft-card-title">Sculptural Fluid Cadence</h3>
+            <p class="craft-card-desc">
+              Tailored with precision geometry and organic fluidity to deliver unprecedented softness and celestial motion in every stride.
+            </p>
+            <div class="craft-card-spec">Fluid Motion &bull; Hand-Finished Edges</div>
+          </div>
+
+          <div class="craft-card">
+            <span class="craft-card-number">03</span>
+            <h3 class="craft-card-title">Invisible French Seams</h3>
+            <p class="craft-card-desc">
+              Every interior edge is bound using ultra-fine French seams and blind stitchwork to eliminate chafing and guarantee that the interior of each abaya is as immaculate as the exterior.
+            </p>
+            <div class="craft-card-spec">12 Stitches Per Inch &bull; Atelier Inspected</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         9. EDITORIAL LOOKBOOK RUNWAY CAROUSEL
+         ========================================== -->
+    <section id="lookbook" class="lookbook-section">
+      <div class="container">
+        
+        <div class="lookbook-header">
+          <div>
+            <span class="eyebrow">The Visual Journey</span>
+            <h2 class="section-title">Editorial Lookbook</h2>
+            <p class="section-desc">
+              Explore our curated styling series captured on location across Dubai, Paris, and Kyoto.
+            </p>
+          </div>
+          <div class="lookbook-nav-arrows">
+            <button class="arrow-btn" id="lookbookPrev" title="Previous Look" aria-label="Previous Look">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="var(--color-noir)" stroke-width="2" fill="none">
+                <polyline points="15 18 9 12 15 6"></polyline>
+              </svg>
+            </button>
+            <button class="arrow-btn" id="lookbookNext" title="Next Look" aria-label="Next Look">
+              <svg viewBox="0 0 24 24" width="18" height="18" stroke="var(--color-noir)" stroke-width="2" fill="none">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="lookbook-slider-container" id="lookbookSlider">
+          <div class="lookbook-track" id="lookbookTrack">
+            <!-- Injected via app.js -->
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         10. THE PRIVATE BESPOKE ATELIER BANNER
+         ========================================== -->
+    <section id="bespoke" class="bespoke-banner">
+      <div class="container">
+        <div class="bespoke-grid">
+          
+          <div class="bespoke-left">
+            <span class="eyebrow" style="color:var(--color-subtle);">Haute Couture Service</span>
+            <h2>Private Atelier & Tailoring Appointments</h2>
+            <p>
+              For our private salon clients, we offer made-to-measure bespoke services with personalized length customisation, neckline adjustments, and dedicated monogram embroidery.
+            </p>
+
+            <div class="bespoke-perks">
+              <div class="perk-item">
+                <h5>Dubai Design District</h5>
+                <p>Private VIP suites with dedicated personal stylists.</p>
+              </div>
+              <div class="perk-item">
+                <h5>London Mayfair & Paris</h5>
+                <p>Seasonal trunk shows and hotel suite consultations.</p>
+              </div>
+            </div>
+
+            <button class="btn btn-white book-appointment-trigger">Schedule Private Consultation</button>
+          </div>
+
+          <div class="bespoke-right">
+            <img src="Gemini_Generated_Image_wzzcdxwzzcdxwzzc.jpg" alt="Z-ABAYA Bespoke Fitting" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         11. EDITORIAL JOURNAL & REVIEWS
+         ========================================== -->
+    <section class="journal-section">
+      <div class="container">
+        
+        <div style="text-align:center; max-width:600px; margin:0 auto;">
+          <span class="eyebrow">The Editorial Journal</span>
+          <h2 class="section-title">Discourses on Modesty</h2>
+        </div>
+
+        <div class="journal-grid">
+          
+          <article class="journal-card">
+            <div class="journal-img-container">
+              <img src="Gemini_Generated_Image_anzc5banzc5banzc.jpg" alt="The Art of The Drape" class="journal-img" loading="lazy" />
+            </div>
+            <div class="journal-meta">
+              <span>Essay No. 14</span>
+              <span>&bull;</span>
+              <span>March 2026</span>
+            </div>
+            <h3 class="journal-title">The Art of the Drape: Architectural Form in Modern Modesty</h3>
+            <p class="journal-excerpt">Examining how sculptural volume and Japanese minimalism have fundamentally transformed luxury regional couture.</p>
+            <button class="btn-link" onclick="openModal('quickViewModal')">Read Dispatch &rarr;</button>
+          </article>
+
+          <article class="journal-card">
+            <div class="journal-img-container">
+              <img src="Gemini_Generated_Image_a1rg62a1rg62a1rg.jpg" alt="From Como to Dubai" class="journal-img" loading="lazy" />
+            </div>
+            <div class="journal-meta">
+              <span>Materials Report</span>
+              <span>&bull;</span>
+              <span>February 2026</span>
+            </div>
+            <h3 class="journal-title">From Como to Dubai: Sourcing the World’s Deepest Noir Crepes</h3>
+            <p class="journal-excerpt">A rare behind-the-scenes look at our natural dye processes that achieve pure non-reflective obsidian pigment.</p>
+            <button class="btn-link" onclick="openModal('quickViewModal')">Read Dispatch &rarr;</button>
+          </article>
+
+          <article class="journal-card">
+            <div class="journal-img-container">
+              <img src="Gemini_Generated_Image_q2kva5q2kva5q2kv.jpg" alt="Evening Silhouette Mastery" class="journal-img" loading="lazy" />
+            </div>
+            <div class="journal-meta">
+              <span>Styling Guide</span>
+              <span>&bull;</span>
+              <span>January 2026</span>
+            </div>
+            <h3 class="journal-title">Curating the Capsule Modest Wardrobe for High Society</h3>
+            <p class="journal-excerpt">Five essential foundational silhouettes engineered for seamless transitions from day business to evening galas.</p>
+            <button class="btn-link" onclick="openModal('quickViewModal')">Read Dispatch &rarr;</button>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         12. CRITICAL ACCLAIM & PRESS STRIP
+         ========================================== -->
+    <section class="press-strip">
+      <div class="container">
+        <span class="eyebrow">Critical Acclaim</span>
+        <div class="press-quotes-grid">
+          
+          <div class="press-quote-item">
+            <h4 class="press-publication">Vogue Arabia</h4>
+            <p class="press-quote-text">"Z-ABAYA has elevated the traditional abaya into the realm of modern sculptural fine art."</p>
+          </div>
+
+          <div class="press-quote-item">
+            <h4 class="press-publication">Harper's Bazaar</h4>
+            <p class="press-quote-text">"Uncompromising minimalism paired with the most luxurious Japanese textiles available."</p>
+          </div>
+
+          <div class="press-quote-item">
+            <h4 class="press-publication">Elle Middle East</h4>
+            <p class="press-quote-text">"A masterclass in restraint, proportion, and effortless regional elegance."</p>
+          </div>
+
+          <div class="press-quote-item">
+            <h4 class="press-publication">L'Officiel</h4>
+            <p class="press-quote-text">"The quintessential choice for the contemporary international woman."</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         13. INSTAGRAM & SOCIAL EDITORIAL MOSAIC
+         ========================================== -->
+    <section class="instagram-section">
+      <div class="container">
+        <span class="eyebrow">Follow The Movement</span>
+        <h2 class="section-title" style="font-size:2.2rem;">@ZABAYA.OFFICIAL</h2>
+      </div>
+
+      <div class="instagram-grid" id="instagramGrid">
+        <!-- Injected via app.js -->
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       14. LUXURY SITE FOOTER
+       ========================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      
+      <!-- VIP Newsletter Signup -->
+      <div class="footer-newsletter-box">
+        <div class="newsletter-text">
+          <span class="eyebrow">Private Invitation</span>
+          <h3>Join The Inner Circle</h3>
+          <p>Receive preview access to new numbered anthology drops, salon appointments, and editorial essays.</p>
+        </div>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" id="newsletterInput" class="newsletter-input" placeholder="Enter your email address" required />
+          <button type="submit" class="newsletter-btn">Subscribe</button>
+        </form>
+      </div>
+
+      <!-- Footer Navigation Grid -->
+      <div class="footer-columns">
+        
+        <div class="footer-col footer-brand-bio">
+          <div class="brand-logo" style="align-items:flex-start; margin-bottom:12px;">
+            <img src="Z..png" alt="Z." class="brand-logo-img" style="height:44px; width:auto;" />
+          </div>
+          <p>
+            Redefining contemporary modesty through architectural cuts, pure monochrome aesthetics, and hand-finished craftsmanship.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Creations</h4>
+          <ul>
+            <li><a href="#catalog">The Noir Collection</a></li>
+            <li><a href="#catalog">Silk & Chiffon</a></li>
+            <li><a href="#catalog">Sculptural Drapes</a></li>
+            <li><a href="#catalog">Occasion & Gala</a></li>
+            <li><a href="#lookbook">Lookbook 2026</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Atelier Salons</h4>
+          <ul>
+            <li><a href="#bespoke">Dubai Design District (D3)</a></li>
+            <li><a href="#bespoke">London Mayfair</a></li>
+            <li><a href="#bespoke">Paris Place Vendôme</a></li>
+            <li><a href="#bespoke">Virtual Concierge</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Client Care</h4>
+          <ul>
+            <li><a href="javascript:void(0)" id="footerSizeBtn" onclick="openModal('sizeModal')">Size & Length Guide</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Global Express Delivery: 2-4 business days worldwide.')">Express Shipping</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Returns accepted within 14 days in original condition.')">White-Glove Returns</a></li>
+            <li><a href="javascript:void(0)" onclick="showToast('Fabric Care: Dry clean only. Steam iron on reverse.')">Garment Care Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>VIP Concierge</h4>
+          <ul>
+            <li style="font-size:0.85rem; color:var(--color-charcoal);">atelier@z-abaya.com</li>
+            <li style="font-size:0.85rem; color:var(--color-charcoal);">+971 4 820 9000 (Dubai)</li>
+            <li style="font-size:0.85rem; color:var(--color-charcoal);">+44 20 7946 0991 (London)</li>
+            <li><button class="btn-link book-appointment-trigger" style="margin-top:8px;">Request Private Callback &rarr;</button></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Footer Bottom -->
+      <div class="footer-bottom">
+        <div>&copy; 2026 Z-ABAYA Haute Couture Atelier. All Rights Reserved.</div>
+        <div style="display:flex; gap:24px;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Authenticity Certificate</a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================
+       15. SLIDE-OUT CART DRAWER
+       ========================================== -->
+  <div class="cart-drawer-overlay" id="cartDrawerOverlay"></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Bag">
+    <div class="cart-header">
+      <h3>Your Bag</h3>
+      <button class="close-drawer-btn" id="closeCartBtn" aria-label="Close Bag">&times;</button>
+    </div>
+
+    <!-- Free Shipping Indicator -->
+    <div class="free-shipping-bar">
+      <p class="free-shipping-text" id="freeShippingText">
+        Add <strong>$300</strong> for complimentary global express shipping.
+      </p>
+      <div class="free-shipping-progress">
+        <div class="free-shipping-fill" id="freeShippingFill"></div>
+      </div>
+    </div>
+
+    <!-- Items list -->
+    <div class="cart-items-container" id="cartItemsContainer">
+      <!-- Injected via app.js -->
+    </div>
+
+    <!-- Cart Footer & Checkout -->
+    <div class="cart-footer">
+      <div class="cart-subtotal-row">
+        <span>Estimated Shipping</span>
+        <span>Calculated at checkout</span>
+      </div>
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <span id="cartTotal">$0</span>
+      </div>
+      <button class="btn btn-noir" style="width:100%;" onclick="showToast('Proceeding to Secure Encrypted Checkout...')">
+        Proceed to Checkout
+      </button>
+      <p style="font-size:0.68rem; color:var(--color-muted); text-align:center; margin-top:10px;">
+        Complimentary luxury packaging & authenticity seal included.
+      </p>
+    </div>
+  </aside>
+
+  <!-- ==========================================
+       16. QUICK VIEW MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-container">
+      <button class="modal-close-btn" id="closeQuickView" aria-label="Close modal">&times;</button>
+      <div id="quickViewContent">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       17. INTERACTIVE SIZE & HEIGHT CALCULATOR MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="sizeModal">
+    <div class="modal-container size-calc-box">
+      <button class="modal-close-btn" id="closeSizeModal" aria-label="Close size guide">&times;</button>
+      <span class="eyebrow">Precision Fit</span>
+      <h3 style="font-family:var(--font-serif); font-size:2rem; font-weight:300; margin-bottom:6px;">Interactive Size & Height Calculator</h3>
+      <p style="font-size:0.88rem; color:var(--color-muted);">
+        Abaya sizing is measured strictly by standard length from shoulder to hemline. Drag the slider to find your bespoke silhouette match.
+      </p>
+
+      <div class="calc-slider-wrap">
+        <div style="display:flex; justify-content:space-between; margin-bottom:8px; font-weight:600; font-size:0.85rem;">
+          <span>Your Height:</span>
+          <span id="heightValLabel">165 cm (5'5")</span>
+        </div>
+        <input type="range" id="heightSlider" min="145" max="190" value="165" />
+      </div>
+
+      <div class="calc-result-box">
+        <span class="eyebrow" style="margin-bottom:2px;">Recommended Abaya Length</span>
+        <div class="calc-result-size" id="calcRecommendedSize">54</div>
+        <p style="font-size:0.85rem; color:var(--color-charcoal); margin-top:6px;" id="calcSizeNotes">
+          Tailored standard for heights 5'4" to 5'6". Falls right at the ankle.
+        </p>
+      </div>
+
+      <div style="margin-top:20px; font-size:0.75rem; color:var(--color-muted); border-top:1px solid var(--color-hairline); padding-top:14px;">
+        <strong>Need Custom Tailoring?</strong> All our atelier pieces can be custom-shortened or lengthened upon request at checkout at no extra charge.
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       18. PRIVATE ATELIER APPOINTMENT MODAL
+       ========================================== -->
+  <div class="modal-overlay" id="appointmentModal">
+    <div class="modal-container appointment-box">
+      <button class="modal-close-btn" id="closeAppointModal" aria-label="Close appointment modal">&times;</button>
+      <span class="eyebrow">Private Salon</span>
+      <h3 style="font-family:var(--font-serif); font-size:2rem; font-weight:300; margin-bottom:6px;">Book a Private Fitting</h3>
+      <p style="font-size:0.88rem; color:var(--color-muted); margin-bottom:20px;">
+        Experience personalized consultation with our Head Tailor in our Dubai D3 Salon, London Mayfair suite, or via private virtual appointment.
+      </p>
+
+      <form id="appointmentForm">
+        <div class="form-group">
+          <label for="appointName">Full Name</label>
+          <input type="text" id="appointName" class="form-control" placeholder="Lady Eleanor Vance" required />
+        </div>
+
+        <div class="form-group">
+          <label for="appointEmail">Email Address</label>
+          <input type="email" id="appointEmail" class="form-control" placeholder="eleanor@example.com" required />
+        </div>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+          <div class="form-group">
+            <label for="appointCity">Salon Location</label>
+            <select id="appointCity" class="form-control">
+              <option value="Dubai Design District">Dubai Design District (D3)</option>
+              <option value="London Mayfair">London Mayfair</option>
+              <option value="Paris Salon">Paris Place Vendôme</option>
+              <option value="Virtual Styling">Virtual Video Consultation</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="appointDate">Preferred Date</label>
+            <input type="date" id="appointDate" class="form-control" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="appointNotes">Silhouette Interest & Sizing Notes</label>
+          <textarea id="appointNotes" class="form-control" rows="3" placeholder="Specify any collections or bespoke measurement requests..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-noir" style="width:100%; margin-top:8px;">
+          Confirm Atelier Reservation
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       19. SEARCH MODAL OVERLAY
+       ========================================== -->
+  <div class="modal-overlay" id="searchModal">
+    <div class="modal-container search-modal-container">
+      <button class="modal-close-btn" id="closeSearchBtn" aria-label="Close search">&times;</button>
+      
+      <div class="search-input-wrap">
+        <input type="text" id="searchInput" placeholder="Search silhouettes, editions, styles..." autofocus />
+      </div>
+
+      <span class="eyebrow" style="margin-bottom:12px;">Anthology Results</span>
+      <div class="search-results-grid" id="searchResultsGrid">
+        <p style="grid-column:1/-1; color:var(--color-muted); text-align:center; padding:20px;">
+          Type keywords such as "Noir", "Trench", "Pleated", "Embellished", "Kimono"...
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       20. TOAST NOTIFICATION CONTAINER
+       ========================================== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Master Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
