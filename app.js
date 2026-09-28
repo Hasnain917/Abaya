@@ -1008,25 +1008,19 @@ function setupScrollReveals() {
 
 function observeElements() {
   if (!globalScrollObserver) return;
+  // On mobile screens, display all elements instantly without opacity delays
+  if (window.innerWidth <= 768) return;
 
   const selector = [
-    'section',
-    '.section-header-group',
-    '.manifesto-grid',
-    '.stat-item',
     '.pillar-card',
     '.product-card',
     '.craft-card',
     '.lookbook-card',
-    '.bespoke-grid',
-    '.journal-card',
-    '.press-quote-item',
-    '.instagram-item',
-    '.hero-cover-content'
+    '.journal-card'
   ].join(', ');
 
   const elements = document.querySelectorAll(selector);
-  elements.forEach((el, idx) => {
+  elements.forEach((el) => {
     if (!el.classList.contains('is-revealed')) {
       el.classList.add('reveal-on-scroll');
       globalScrollObserver.observe(el);
