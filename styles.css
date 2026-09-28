@@ -64,7 +64,6 @@
 
 html {
   font-size: 16px;
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -79,26 +78,34 @@ body {
   position: relative;
 }
 
-/* Custom Scrollbar */
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-track {
-  background: var(--bg-secondary);
-}
-::-webkit-scrollbar-thumb {
-  background: var(--color-subtle);
-  border-radius: 0px;
-}
-::-webkit-scrollbar-thumb:hover {
-  background: var(--color-noir);
-}
-
+/* Performance Optimizations: GPU Layer Promotion & Offscreen Optimization */
 img, video {
   display: block;
   width: 100%;
   height: auto;
   object-fit: cover;
+  transform: translateZ(0);
+}
+
+.product-card,
+.lookbook-card,
+.pillar-card,
+.craft-card,
+.journal-card {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
+
+.catalog-section,
+.cinematic-showcase,
+.craft-section,
+.lookbook-section,
+.bespoke-banner,
+.journal-section,
+.press-strip,
+.instagram-section {
+  content-visibility: auto;
+  contain-intrinsic-size: 1px 700px;
 }
 
 a {

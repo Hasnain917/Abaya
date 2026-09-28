@@ -482,8 +482,8 @@ function renderProducts() {
     return `
       <div class="product-card reveal-item" data-id="${p.id}" style="--item-index: ${index % 4}">
         <div class="product-image-container" style="background-color: ${p.bgTone || '#F6F4F0'};">
-          <img src="${p.primaryImg}" alt="${p.title}" class="product-img product-img-primary" loading="lazy" />
-          <img src="${p.secondaryImg}" alt="${p.title} alternate colorway" class="product-img-secondary" loading="lazy" />
+          <img src="${p.primaryImg}" alt="${p.title}" class="product-img product-img-primary" loading="lazy" decoding="async" />
+          <img src="${p.secondaryImg}" alt="${p.title} alternate colorway" class="product-img-secondary" loading="lazy" decoding="async" />
           
           <div class="product-badges">
             ${p.tags.map(t => `<span class="badge badge-noir">${t}</span>`).join('')}
@@ -538,7 +538,7 @@ function renderLookbook() {
   container.innerHTML = LOOKBOOK_ITEMS.map(item => `
     <div class="lookbook-card">
       <div class="lookbook-img-box">
-        <img src="${item.image}" alt="${item.title}" class="lookbook-img" loading="lazy" />
+        <img src="${item.image}" alt="${item.title}" class="lookbook-img" loading="lazy" decoding="async" />
       </div>
       <div class="lookbook-info">
         <span class="lookbook-look-tag">${item.tag}</span>
@@ -559,7 +559,7 @@ function renderInstagramGallery() {
 
   container.innerHTML = INSTA_GALLERY.map(img => `
     <div class="instagram-item">
-      <img src="${img}" alt="Z-ABAYA Editorial Silhouette" loading="lazy" />
+      <img src="${img}" alt="Z-ABAYA Editorial Silhouette" loading="lazy" decoding="async" />
       <div class="instagram-overlay">
         <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" stroke-width="1.5">
           <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
